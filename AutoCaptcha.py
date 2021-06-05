@@ -2,10 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome('chromedriver.exe')
-driver.get('https://moodle.iitd.ac.in/login/index.php')
-
-driver.find_element_by_id("username").send_keys('ph1200736')
-driver.find_element_by_id("password").send_keys('776e9567')
+driver.get('https://moodle.iitd.ac.in/login/index.php')#{Link for IIT Delhi MOODLE,Varies by college}
+driver.find_element_by_id("username").send_keys('_USER ID HERE_')#replace with USER ID
+driver.find_element_by_id("password").send_keys('_PASSWORD HERE_')#replace with PASSWORD
 
 quiz=driver.find_element_by_id("login").text[51:].split()
 driver.find_element_by_id("valuepkg3").send_keys(Keys.BACKSPACE)
